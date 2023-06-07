@@ -1,0 +1,47 @@
+/*====================================================================================================*/
+//!---------COMMON BLOCKS-----------------------------------------------------------------------------*/
+/*====================================================================================================*/
+
+.logo {
+  display: inline-flex;
+  align-items: center;
+  gap: rem(2);
+  white-space: nowrap;
+
+  @media (any-hover: hover) {
+    &:hover &__icon {
+      fill: var(--color-orange);
+    }
+    &:hover &__text {
+      color: var(--color-orange);
+    }
+  }
+
+  &:active &__icon {
+    fill: var(--color-red);
+  }
+  &:active &__text {
+    color: var(--color-red);
+  }
+
+  &:focus-visible {
+    outline: none;
+    box-shadow: 0 0 0 rem(2) rgb(var(--color-focus));
+  }
+
+  &__icon {
+    width: rem(41);
+    height: rem(31);
+    fill: rgb(var(--color-blue));
+    transition: fill 0.2s ease-in-out;
+  }
+
+  &__text {
+    font-family: $font-roboto;
+    font-weight: 500;
+    font-size: rem(31);
+    line-height: lh(36, 31);
+    color: rgb(var(--color-blue));
+    transition: color 0.2s ease-in-out;
+  }
+}
